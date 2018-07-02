@@ -1,0 +1,69 @@
+:root {
+    --primary-light: white;
+    --highlight: blue;
+    --contrast: orange;
+    --secondary-light: whitesmoke;
+    --primary-dark: #222;
+    --secondary-dark: #464444;
+    --container-padding: 20px;
+    --tile-size: 300px;
+}
+
+* {
+    box-sizing: border-box;
+    max-width: 100%;
+    line-height: 1.5;
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body {
+    font-size: 100.001%;
+}
+
+#welcome-section {
+    height: 100vh;
+    background: var(--primary-light, white);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-container {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90vw;
+    background: var(--highlight, blue);
+}
+
+main {
+    background: var(--secondary-light, whitesmoke);
+    text-align: center;
+}
+
+#projects {
+    padding: var(--container-padding, 20px);
+}
+
+#projects-container {
+    position: relative;
+    display: grid;
+    grid-template-areas: "t1 d1" "d2 t2" "t3 d3" "t4 d4" "t5 d5" "t6 d6";
+    width: 700px;
+    margin: auto;
+}
+
+.project-section {
+    height: var(--tile-size, 300px);
+    width: var(--tile-size, 300px);
+}
+
+.project-tile {
+    background: var(--contrast, orange);
+}
