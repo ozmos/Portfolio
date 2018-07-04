@@ -63,6 +63,7 @@ main {
 .project-section {}
 
 .project-tile {
+    position: relative;
     height: calc(var(--container-width) / 4);
     width: calc(var(--container-width) / 4);
     margin: calc(var(--container-padding) / 2);
@@ -75,13 +76,33 @@ main {
 }
 
 .project-description-section {
-    display: none;
     position: absolute;
-    width: 500px;
-    max-width: 90%;
-    margin: auto;
-    background: black;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #008CBA;
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
+}
+
+.project-tile:hover .project-description-section {
+    height: 100%;
+    top: 0;
+}
+
+.project-description-text {
     color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    white-space: wrap;
+    width: 100%;
+    height: 100%;
 }
 
 .reveal {
