@@ -54,23 +54,34 @@ main {
 #projects-container {
     position: relative;
     display: flex;
+    justify-content: center;
     flex-flow: row wrap;
-    width: var(--container-width, 100%);
+    /*  width: var(--container-width, 100%);*/
     margin: auto;
 }
 
-.project-section {
-    height: calc(var(--container-width) / 9);
-    width: calc(var(--container-width) / 9);
-}
+.project-section {}
 
 .project-tile {
-    background: var(--contrast, orange);
+    height: calc(var(--container-width) / 4);
+    width: calc(var(--container-width) / 4);
+    margin: calc(var(--container-padding) / 2);
     border: 1px solid black;
+}
+
+.project-tile img {
+    height: 100%;
+    width: 100%;
 }
 
 .project-description-section {
     display: none;
+    position: absolute;
+    width: 500px;
+    max-width: 90%;
+    margin: auto;
+    background: black;
+    color: white;
 }
 
 .reveal {
