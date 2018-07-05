@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
 :root {
     --primary-light: white;
     --highlight: blue;
@@ -21,21 +22,50 @@
     box-sizing: border-box;
     max-width: 100%;
     line-height: 1.2;
-    padding: 0;
-    margin: 0;
 }
 
 html,
 body {
     font-size: 100.001%;
+    padding: 0;
+    margin: 0;
 }
 
 #welcome-section {
     height: 100vh;
-    background: var(--primary-light, white);
     display: flex;
     justify-content: space-around;
     align-items: center;
+    background: rgb(141, 198, 212);
+    padding: 10px;
+}
+
+h1 {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    font-size: 5em;
+    font-family: 'Roboto Mono', monospace;
+    z-index: 1;
+    text-shadow: -1px 0 rgba(250, 250, 250, 0.5), 0 1px rgba(250, 250, 250, 0.5), 1px 0 rgba(250, 250, 250, 0.5), 0 -1px rgba(250, 250, 250, 0.5);
+}
+
+.luminous {
+    color: #fff;
+}
+
+.bulb {
+    position: absolute;
+    background: #fff;
+    border-radius: 50%;
+    width: 13px;
+    height: 13px;
+    top: 22px;
+    left: 75.5px;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 30px 10px #fff;
+    animation: flicker;
 }
 
 .nav-container {
@@ -47,7 +77,8 @@ body {
     justify-content: space-between;
     align-items: center;
     width: 90vw;
-    background: var(--highlight, blue);
+    /* background: var(--highlight, blue); */
+    border-bottom: 1px solid black;
 }
 
 main {
