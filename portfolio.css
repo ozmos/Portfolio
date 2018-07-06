@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
-:root {
+ :root {
     --primary-light: white;
     --highlight: blue;
     --contrast: orange;
@@ -36,7 +36,7 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background: rgb(141, 198, 212);
+    background: #222;
     padding: 10px;
 }
 
@@ -47,12 +47,75 @@ h1 {
     transform: translate(-50%, -50%);
     font-size: 5em;
     font-family: 'Roboto Mono', monospace;
-    z-index: 1;
-    text-shadow: -1px 0 rgba(250, 250, 250, 0.5), 0 1px rgba(250, 250, 250, 0.5), 1px 0 rgba(250, 250, 250, 0.5), 0 -1px rgba(250, 250, 250, 0.5);
+    color: rgba(255, 255, 255, 0);
+    animation: fade-on 5s linear 9s 1, stay 1s linear 14s infinite;
+}
+
+@keyframes fade-on {
+    0% {
+        color: rgba(255, 255, 255, 0);
+    }
+    100% {
+        color: rgba(255, 255, 255, .99);
+    }
+}
+
+@keyframes stay {
+    0%,
+    100% {
+        color: white;
+        opacity: .99;
+        text-shadow: none;
+    }
 }
 
 .luminous {
     color: #fff;
+    animation: flicker 5s linear 4s 1, stay-on 2s linear 9s infinite;
+    opacity: 0.4;
+}
+
+@keyframes flicker {
+    0%,
+    14.999%,
+    17%,
+    43.999%,
+    47%,
+    54.999%,
+    62%,
+    62.999%,
+    64%,
+    64.999%,
+    66%,
+    100% {
+        opacity: .99;
+        text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white, 0 -2px 8px, 0 0 2px, 0 0 5px white, 0 0 15px white, 0 0 2px #ff7e00, 0 2px 3px #000;
+    }
+    15%,
+    16.999%,
+    44%,
+    46.999%,
+    55%,
+    61.999%,
+    63%,
+    63.999%,
+    65%,
+    65.999% {
+        opacity: 0.4;
+        text-shadow: none;
+    }
+}
+
+@keyframes stay-on {
+    0%,
+    100% {
+        opacity: .99;
+        text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white, 0 -2px 8px, 0 0 2px, 0 0 5px white, 0 0 15px white, 0 0 2px #ff7e00, 0 2px 3px #000;
+    }
+    50% {
+        opacity: 0.89;
+        text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white, 0 -2px 5px, 0 0 2px, 0 0 5px white, 0 0 10px white, 0 0 2px #ff7e00, 0 2px 3px #000;
+    }
 }
 
 .bulb {
