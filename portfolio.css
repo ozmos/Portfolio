@@ -1,8 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed|Roboto+Mono');
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Roboto+Condensed|Roboto+Slab');
  :root {
     --primary-light: #fff;
-    --highlight: /* #4deeea;  */
-    #00dffc;
+    --highlight: #00dffc;
     --neon-white: #fff;
     --contrast: #008c9e;
     --secondary-light: whitesmoke;
@@ -16,7 +15,8 @@
     --header-height: 8rem;
     --border-width: 20px;
     --main-text: 'Roboto Condensed';
-    --headings: 'Roboto Mono';
+    --headings: 'Roboto Slab';
+    --logo: 'Montserrat';
 }
 
 @media (max-width: 420px) {
@@ -81,11 +81,12 @@ h1 {
     animation: fade-on 1.5s linear 7s 1, fades-down 1s linear 8.5s 1, stay 1s linear 9.5s infinite;
     text-shadow: none;
     margin: 0;
-    letter-spacing: 0em !important;
+    /* letter-spacing: 0em !important; */
 }
 
 p,
-h3 {
+h3,
+a {
     font-family: var(--main-text, sans-serif);
 }
 
@@ -183,11 +184,12 @@ h3 {
     font-family: 'Roboto Condensed', sans-serif;
     transform: rotate(-20deg);
     opacity: 0.2;
+    color: var(--highlight, #00dffc);
     animation: flick-on 1.5s linear 13s 1, flick-stay 3s linear 14.5s infinite;
 }
 
 .welcome-link:visited {
-    color: var(--highlight, blue);
+    color: var(--highlight, #00dffc);
 }
 
 nav {
@@ -195,6 +197,7 @@ nav {
     top: 0;
     text-align: center;
     width: 100%;
+    color: var(--highlight, #00dffc);
 }
 
 .nav-container {
@@ -204,31 +207,43 @@ nav {
     justify-content: space-between;
     align-items: center;
     width: 90%;
-    color: var(--highlight, blue);
-    /* background: var(--highlight, var(--highlight, blue)); */
-    border-bottom: 2px solid var(--highlight, blue);
+    color: var(--highlight, #00dffc);
+    /* background: var(--highlight, var(--highlight, #00dffc)); */
+    border-bottom: 2px solid var(--highlight, #00dffc);
+    font-weight: bold;
     opacity: 0.2;
     animation: flick-on 1.5s linear 14s 1, fade-down 1s linear 15.5s 1, stays 3s linear 16.5s infinite;
 }
 
-.nav-container,
-a:visited {
-    color: var(--highlight, blue);
+#home-link {
+    color: var(--highlight, #00dffc);
+    text-decoration: none;
+}
+
+#home-link h2 {
+    font-family: var(--logo, sans-serif);
+}
+
+.nav-container a:visited {
+    color: var(--highlight, #00dffc);
 }
 
 .nav-container a:hover {
-    color: var(--highlight, blue);
-    text-shadow: -1px -1px 0 var(--highlight, blue), 1px -1px 0 var(--highlight, blue), -1px 1px 0 var(--highlight, blue), 1px 1px 0 var(--highlight, blue), 0 -2px 8px, 0 0 2px, 0 0 5px var(--highlight, blue), 0 0 15px var(--highlight, blue), 0 0 2px var(--highlight, blue), 0 2px 3px var(--highlight, blue);
+    color: var(--highlight, #00dffc);
+    text-shadow: -1px -1px 0 var(--highlight, #00dffc), 1px -1px 0 var(--highlight, #00dffc), -1px 1px 0 var(--highlight, #00dffc), 1px 1px 0 var(--highlight, #00dffc), 0 -2px 8px, 0 0 2px, 0 0 5px var(--highlight, #00dffc), 0 0 15px var(--highlight, #00dffc), 0 0 2px var(--highlight, #00dffc), 0 2px 3px var(--highlight, #00dffc);
     opacity: .99;
 }
 
 .nav-list {
     display: flex;
     justify-content: space-evenly;
+    color: var(--highlight, #00dffc);
 }
 
 .nav-link {
     margin-right: 60px;
+    color: var(--highlight, #00dffc);
+    font-family: var(--headings, monospace) !important;
 }
 
 @keyframes flick-on {
@@ -236,7 +251,7 @@ a:visited {
     19.999%,
     22%,
     100% {
-        text-shadow: -1px -1px 0 var(--highlight, blue), 1px -1px 0 var(--highlight, blue), -1px 1px 0 var(--highlight, blue), 1px 1px 0 var(--highlight, blue), 0 -2px 8px, 0 0 2px, 0 0 5px var(--highlight, blue), 0 0 15px var(--highlight, blue), 0 0 2px var(--highlight, blue), 0 2px 3px var(--highlight, blue);
+        text-shadow: -1px -1px 0 var(--highlight, #00dffc), 1px -1px 0 var(--highlight, #00dffc), -1px 1px 0 var(--highlight, #00dffc), 1px 1px 0 var(--highlight, #00dffc), 0 -2px 8px, 0 0 2px, 0 0 5px var(--highlight, #00dffc), 0 0 15px var(--highlight, #00dffc), 0 0 2px var(--highlight, #00dffc), 0 2px 3px var(--highlight, #00dffc);
         opacity: .99;
     }
     20%,
@@ -255,7 +270,7 @@ a:visited {
     95.999%,
     97%,
     100% {
-        text-shadow: -1px -1px 0 var(--highlight, blue), 1px -1px 0 var(--highlight, blue), -1px 1px 0 var(--highlight, blue), 1px 1px 0 var(--highlight, blue), 0 -2px 8px, 0 0 2px, 0 0 5px var(--highlight, blue), 0 0 15px var(--highlight, blue), 0 0 2px var(--highlight, blue), 0 2px 3px var(--highlight, blue);
+        text-shadow: -1px -1px 0 var(--highlight, #00dffc), 1px -1px 0 var(--highlight, #00dffc), -1px 1px 0 var(--highlight, #00dffc), 1px 1px 0 var(--highlight, #00dffc), 0 -2px 8px, 0 0 2px, 0 0 5px var(--highlight, #00dffc), 0 0 15px var(--highlight, #00dffc), 0 0 2px var(--highlight, #00dffc), 0 2px 3px var(--highlight, #00dffc);
         opacity: .99;
     }
     90%,
@@ -269,13 +284,13 @@ a:visited {
     }
     44.9% {
         opacity: 0.89;
-        text-shadow: -1px -1px 0 var(--highlight, blue), 1px -1px 0 var(--highlight, blue), -1px 1px 0 var(--highlight, blue), 1px 1px 0 var(--highlight, blue), 0 -2px 4px, 0 0 2px, 0 0 5px var(--highlight, blue), 0 0 5px var(--highlight, blue), 0 0 2px var(--highlight, blue), 0 2px 3px var(--highlight, blue);
+        text-shadow: -1px -1px 0 var(--highlight, #00dffc), 1px -1px 0 var(--highlight, #00dffc), -1px 1px 0 var(--highlight, #00dffc), 1px 1px 0 var(--highlight, #00dffc), 0 -2px 4px, 0 0 2px, 0 0 5px var(--highlight, #00dffc), 0 0 5px var(--highlight, #00dffc), 0 0 2px var(--highlight, #00dffc), 0 2px 3px var(--highlight, #00dffc);
     }
 }
 
 @keyframes fade-down {
     0% {
-        text-shadow: -1px -1px 0 var(--highlight, blue), 1px -1px 0 var(--highlight, blue), -1px 1px 0 var(--highlight, blue), 1px 1px 0 var(--highlight, blue), 0 -2px 8px, 0 0 2px, 0 0 5px var(--highlight, blue), 0 0 15px var(--highlight, blue), 0 0 2px var(--highlight, blue), 0 2px 3px var(--highlight, blue);
+        text-shadow: -1px -1px 0 var(--highlight, #00dffc), 1px -1px 0 var(--highlight, #00dffc), -1px 1px 0 var(--highlight, #00dffc), 1px 1px 0 var(--highlight, #00dffc), 0 -2px 8px, 0 0 2px, 0 0 5px var(--highlight, #00dffc), 0 0 15px var(--highlight, #00dffc), 0 0 2px var(--highlight, #00dffc), 0 2px 3px var(--highlight, #00dffc);
         opacity: .99;
     }
     100% {
