@@ -8,15 +8,21 @@
     <meta name="author" content="Osamu Morozumi">
     <meta name="description" content="Portfolio page for web developer Osamu Morozumi">
     <link rel="stylesheet" href="portfolio.css">
+
 </head>
 
 <body>
     <a id="home"></a>
     <header id="welcome-section">
-        <h1>Hi, My name is Osamu,</h1>
-        <h2>and I build web pages</h2>
-        <p>The man who does the best job is the one who is happy at his job. Every single thing in the world has its own personality - and it is up to you to make friends with the little rascals. This is truly an almighty mountain.
-        </p>
+        <div class="headings-section">
+            <h1>
+                <!-- <div class="bulb"></div> -->
+                H<span class="luminous">i</span>, I'm Osamu,</h1>
+            <h2 class="welcome-subheading">I build web pages and applications</h2>
+        </div>
+        <a class="welcome-link" href="#projects">
+            <h3>See my work</h3>
+        </a>
     </header>
     <nav id="navbar">
         <div class="nav-container">
@@ -27,13 +33,13 @@
             </header>
             <div class="nav-list">
                 <div class="link-container">
-                    <a class="nav-link" href="#projects">
-							Projects
+                    <a class="nav-link" href="#about">
+							About
 						</a>
                 </div>
                 <div class="link-container">
-                    <a class="nav-link" href="#skills">
-							Skills
+                    <a class="nav-link" href="#projects">
+							Projects
 						</a>
                 </div>
                 <div class="link-container">
@@ -41,155 +47,231 @@
 							Contact
 						</a>
                 </div>
-                <div class="link-container">
-                    <a class="nav-link" href="#"> ..</a>
+            </div>
+            <div id="menu-toggle">
+                <div class="hamburger top">
+                </div>
+                <div class="hamburger top">
+                </div>
+                <div class="hamburger">
                 </div>
             </div>
         </div>
+
     </nav>
     <main>
+        <article id="about">
+            <header class="article-header" id="about-header">
+                <h2 class="article-heading" id="about-heading">About</h2>
+            </header>
+            <div class="container" id="about-container">
+                <section class="about-section about-picture">
+                    <img class="profile-picture" src="images/profile-greyscale-reduced.jpg" alt="black and white profile picture">
+
+                </section>
+                <section class="about-section">
+
+                    <!-- <h3 class="about-section-heading">About me</h3> -->
+                    <p class="about-description">
+                        I started coding in March 2018 in response to extended time off work due to injury. Web development has quickly become my passion and I love building web apps and designing web pages. I have experience using: <em class="tech">HTML5</em>,
+                        <em class="tech">CSS3</em>, <em class="tech">javaScript</em>, <em class="tech">jQuery</em> and <em class="tech">git</em>. I am always improving my development skills and knowledge.
+                    </p>
+
+        </article>
         <article id="projects">
             <h2 class="article-heading" id="projects-heading">Projects</h2>
             <div class="container" id="projects-container">
                 <section class="project-section project-tile">
                     <img src="images/portfolio-thumbs/product-landing-page-resized.jpg" alt="project thumb">
+                    <section class="project-section project-description-section">
+
+                        <div class="project-description-text">
+                            <h3 class="project-title">Product landing page</h3>
+                            <p>
+                                I envisioned a global technology company planting trees around the world and what their website would look like for this free code camp project.
+                            </p>
+                            <a href="https://ozmos.github.io/product-landing-page/" target="_blank">Project</a>
+                            <br>
+                            <a href="https://github.com/ozmos/product-landing-page" target="_blank">Code</a>
+                        </div>
+                    </section>
                 </section>
-                <section class="project-section project-description-section">
-                    <h3 class="project-title">Project</h3>
-                    <p class="project-description-text">
-                        Don't fiddle with it all day. Just a happy little shadow that lives in there. We'll put all the little clouds in and let them dance around and have fun. Just think about these things in your mind and drop em' on canvas. You have to make these big decisions.
-                    </p>
-                </section>
+
                 <section class="project-section project-tile">
                     <img src="images/portfolio-thumbs/survey-form-resized.jpg" alt="project thumb">
+                    <section class="project-section project-description-section">
+                        <div class="project-description-text">
+                            <h3 class="project-title">Survey form</h3>
+                            <p>
+                                This page utilizes flex-box, grid and media queries to create responsive elements within a flexible layout. Created as a project for free code camp.
+                            </p>
+                            <a href="https://ozmos.github.io/survey-form/" target="_blank">Project</a>
+                            <br>
+                            <a href="https://github.com/ozmos/survey-form" target="_blank">Code</a>
+                        </div>
+                    </section>
                 </section>
-                <section class="project-section project-description-section">
-                    <h3 class="project-title">Project</h3>
-                    <p class="project-description-text">
-                        Don't fiddle with it all day. Just a happy little shadow that lives in there. We'll put all the little clouds in and let them dance around and have fun. Just think about these things in your mind and drop em' on canvas. You have to make these big decisions.
-                    </p>
-                </section>
+
                 <section class="project-section project-tile">
                     <img src="images/portfolio-thumbs/tech-doc-page-resized.jpg" alt="project thumb">
+                    <section class="project-section project-description-section">
+
+                        <div class="project-description-text">
+                            <h3 class="project-title">Technical documentation page</h3>
+                            <p>
+                                The clean layout and style of this page fits the subject. Created as a project for free code camp.
+                            </p>
+                            <a href="https://ozmos.github.io/technical-documentation-page/" target="_blank">Project</a>
+                            <br>
+                            <a href="https://github.com/ozmos/technical-documentation-page" target="_blank">Code</a>
+                        </div>
+                    </section>
                 </section>
-                <section class="project-section project-description-section">
-                    <h3 class="project-title">Project</h3>
-                    <p class="project-description-text">
-                        Don't fiddle with it all day. Just a happy little shadow that lives in there. We'll put all the little clouds in and let them dance around and have fun. Just think about these things in your mind and drop em' on canvas. You have to make these big decisions.
-                    </p>
-                </section>
+
                 <section class="project-section project-tile">
                     <img src="images/portfolio-thumbs/wikiviewer-resized.jpg" alt="project thumb">
+                    <section class="project-section project-description-section">
+
+                        <div class="project-description-text">
+                            <h3 class="project-title">Wikiviewer</h3>
+                            <p>
+                                This simple web app uses jQuery and JSON to enable the user to search for wikipedia articles. Created as a project for free code camp.
+                            </p>
+                            <a href="https://ozmos.github.io/wikiviewer/" target="_blank">Project</a>
+                            <br>
+                            <a href="https://github.com/ozmos/wikiviewer" target="_blank">Code</a>
+                        </div>
+                    </section>
                 </section>
-                <section class="project-section project-description-section">
-                    <h3 class="project-title">Project</h3>
-                    <p class="project-description-text">
-                        Don't fiddle with it all day. Just a happy little shadow that lives in there. We'll put all the little clouds in and let them dance around and have fun. Just think about these things in your mind and drop em' on canvas. You have to make these big decisions.
-                    </p>
-                </section>
+
                 <section class="project-section project-tile">
                     <img src="images/portfolio-thumbs/random-quote-hard-resized.jpg" alt="project thumb">
+                    <section class="project-section project-description-section">
+
+                        <div class="project-description-text">
+                            <h3 class="project-title">Random quote generator</h3>
+                            <p>
+                                This simple web app uses javascript to generate random quotes. The user has the option to tweet the quote. Created as a project for free code camp.
+                            </p>
+                            <a href="https://codepen.io/ozmos/full/erLwVv/" target="_blank">Project</a>
+                            <br>
+                            <a href="https://codepen.io/ozmos/pen/erLwVv" target="_blank">Code</a>
+                        </div>
+                    </section>
                 </section>
-                <section class="project-section project-description-section">
-                    <h3 class="project-title">Project</h3>
-                    <p class="project-description-text">
-                        Don't fiddle with it all day. Just a happy little shadow that lives in there. We'll put all the little clouds in and let them dance around and have fun. Just think about these things in your mind and drop em' on canvas. You have to make these big decisions.
-                    </p>
-                </section>
+
                 <section class="project-section project-tile">
                     <img src="images/portfolio-thumbs/clock-app-resized.jpg" alt="project thumb">
+                    <section class="project-section project-description-section">
+
+                        <div class="project-description-text">
+                            <h3 class="project-title">Digital clock</h3>
+                            <p>
+                                This is a simple digital clock I created using javascript. You can toggle between 12 and 24hr time with a button.
+                            </p>
+                            <br>
+
+
+                            <a href="https://codepen.io/ozmos/full/mKzqLV/" target="_blank">Project</a>
+                            <br>
+                            <a href="https://codepen.io/ozmos/pen/mKzqLV" target="_blank">Code</a>
+                        </div>
+                    </section>
                 </section>
-                <section class="project-section project-description-section">
-                    <h3 class="project-title">Project</h3>
-                    <p class="project-description-text">
-                        Don't fiddle with it all day. Just a happy little shadow that lives in there. We'll put all the little clouds in and let them dance around and have fun. Just think about these things in your mind and drop em' on canvas. You have to make these big decisions.
-                    </p>
-                </section>
+
                 <section class="project-section project-tile">
-                    <img src="images/portfolio-thumbs/random-quote-api-resized.jpg" alt="project thumb">
+                    <img src="images/portfolio-thumbs/image-viewer-resized.jpg" alt="project thumb">
+                    <section class="project-section project-description-section">
+
+                        <div class="project-description-text">
+                            <h3 class="project-title">Image viewer</h3>
+                            <p>
+                                This is a simple image viewing gallery I made with Javascript.
+                            </p>
+                            <a href="https://codepen.io/ozmos/full/ZRwwPz/" target="_blank">Project</a>
+                            <br>
+                            <a href="https://codepen.io/ozmos/pen/ZRwwPz" target="_blank">Code</a>
+                        </div>
+                    </section>
                 </section>
-                <section class="project-section project-description-section">
-                    <h3 class="project-title">Project</h3>
-                    <p class="project-description-text">
-                        Don't fiddle with it all day. Just a happy little shadow that lives in there. We'll put all the little clouds in and let them dance around and have fun. Just think about these things in your mind and drop em' on canvas. You have to make these big decisions.
-                    </p>
-                </section>
+
                 <section class="project-section project-tile">
-                    <img src="images/portfolio-thumbs/wikiviewer-resized.jpg" alt="project thumb">
+                    <img src="images/portfolio-thumbs/tribute-page-resized.jpg" alt="project thumb">
+                    <section class="project-section project-description-section">
+                        <div class="project-description-text">
+                            <h3 class="project-title">Tribute page</h3>
+                            <p>
+                                This page utilizes flex-box, grid and media queries to create responsive elements within a flexible layout. Created as a project for free code camp.
+                            </p>
+                            <a href="https://ozmos.github.io/Sam-Harris-tribute-page/" target="_blank">Project</a>
+                            <br>
+                            <a href="https://github.com/ozmos/Sam-Harris-tribute-page" target="_blank">Code</a>
+                        </div>
+                    </section>
                 </section>
-                <section class="project-section project-description-section">
-                    <h3 class="project-title">Project</h3>
-                    <p class="project-description-text">
-                        Don't fiddle with it all day. Just a happy little shadow that lives in there. We'll put all the little clouds in and let them dance around and have fun. Just think about these things in your mind and drop em' on canvas. You have to make these big decisions.
-                    </p>
-                </section>
+
                 <section class="project-section project-tile">
                     <img src="images/portfolio-thumbs/weather-app-resized.jpg" alt="project thumb">
+                    <section class="project-section project-description-section">
+                        <div class="project-description-text">
+                            <h3 class="project-title">Local weather app</h3>
+                            <p>
+                                This simple app shows the user's local weather using jQuery, geolocation and an API.
+                            </p>
+                            <a href="https://ozmos.github.io/weather-app-fcc/" target="_blank">Project</a>
+                            <br>
+                            <a href="https://github.com/ozmos/weather-app-fcc" target="_blank">Code</a>
+                        </div>
+                    </section>
                 </section>
-                <section class="project-section project-description-section">
-                    <h3 class="project-title">Project</h3>
-                    <p class="project-description-text">
-                        Don't fiddle with it all day. Just a happy little shadow that lives in there. We'll put all the little clouds in and let them dance around and have fun. Just think about these things in your mind and drop em' on canvas. You have to make these big decisions.
-                    </p>
-                </section>
+
             </div>
             <section id="profile-links">
-                <h2 id="links-heading">See more of my work on</h2>
-                <a id="profile-link" href="https://github.com/ozmos/">Github</a>
-                <br>
-                <a id="profile-link-1" href="https://codepen.io/ozmos/">Codepen</a>
+
+
+                <a id="profile-link" href="https://github.com/ozmos/">
+                    <h2 id="links-heading">See more of my work</h2>
+                </a>
+
+
             </section>
         </article>
-        <article id="skills">
-            <h2 class="article-heading" id="skills-heading">Skills</h2>
-            <div class="container" id="skills-container">
-                <section class="skills-section">
-                    <img class="tech-logo" src="images/" alt="">
-                    <h3 class="tech-heading">Tech</h3>
-                    <p class="skills-description">
-                        With practice comes confidence. If these lines aren't straight, your water's going to run right out of your painting and get your floor wet. A little happy sunlight shining through there. You need the dark in order to show the light. Just a happy little
-                        shadow that lives in there.
-                    </p>
-                </section>
-                <section class="skills-section">
-                    <img class="tech-logo" src="images/" alt="">
-                    <h3 class="tech-heading">Tech</h3>
-                    <p class="skills-description">
-                        With practice comes confidence. If these lines aren't straight, your water's going to run right out of your painting and get your floor wet. A little happy sunlight shining through there. You need the dark in order to show the light. Just a happy little
-                        shadow that lives in there.
-                    </p>
-                </section>
-                <section class="skills-section">
-                    <img class="tech-logo" src="images/" alt="">
-                    <h3 class="tech-heading">Tech</h3>
-                    <p class="skills-description">
-                        With practice comes confidence. If these lines aren't straight, your water's going to run right out of your painting and get your floor wet. A little happy sunlight shining through there. You need the dark in order to show the light. Just a happy little
-                        shadow that lives in there.
-                    </p>
-                </section>
-        </article>
+
         <article id="contact">
             <h2 class="article-heading" id="contact-heading">Get in touch</h2>
-            <form id="form">
-                <input id="name" type="text" placeholder="your name" required>
-                <input id="number" type="number" placeholder="your phone number">
-                <input type="email" name="email" id="email" placeholder="your email@mail.com" required>
-                <input id="submit" type="submit" value="Submit">
-            </form>
-            <h3 id="socials-heading">Catch me hanging out here</h3>
-            <div class="container" id="socials-container">
-                <img class="socials-icon" src="images/" alt="social">
-                <img class="socials-icon" src="images/" alt="social">
-                <img class="socials-icon" src="images/" alt="social">
-                <img class="socials-icon" src="images/" alt="social">
+            <div class="contact-section">
+                <form id="form" action="https://mail.google.com/mail">
+                    <input id="name" type="text" placeholder="your name" required>
+                    <!-- <input id="number" type="number" placeholder="your phone number"> -->
+                    <input type="email" name="email" id="email" placeholder="your email@mail.com" required>
+                    <input id="submit" type="submit" value="Submit">
+                </form>
+
+                <div class="container" id="socials-container">
+                    <h3 id="socials-heading">Catch me hanging out here</h3>
+                    <a href="https://twitter.com/ozmosTheGreat" target="_blank">
+                        <img class="socials-icon" src="images/icons/3225183 - app logo media popular social twitter.svg" alt="twitter logo">
+                    </a>
+                    <a href="https://forum.freecodecamp.org/u/ozmos/" target="_blank">
+                        <img class="socials-icon" src="images/icons/freeCodeCampSquare.jpeg" alt="free code camp">
+                    </a>
+                    <a href="https://www.linkedin.com/in/osamu-morozumi-692a27141/" target="_blank">
+                        <img class="socials-icon" src="images/icons/3225190 - app linkedin logo media popular social.svg" alt="linkedin">
+                    </a>
+                    <!-- social icons from https://www.iconfinder.com/Indygo-->
+                    <a href="https://github.com/ozmos" target="blank">
+                        <img class="socials-icon" src="images/icons/if_Github_1298743.svg" alt="github">
+                    </a>
+                    <!-- github icon from https://www.behance.net/Just_UI -->
+                </div>
             </div>
         </article>
     </main>
     <footer>
         <span class="copyright-info">
 				<a href="https://github.com/ozmos" target="blank">
-					Osamu Morozumi <time datetime="2018">2018</time>
-				</a>
+					Osamu Morozumi</a>
+                <time datetime="2018"> 2018</time>
 			</span>
         <div class="footer-nav-links">
             <div class="footer-link-container">
@@ -214,6 +296,7 @@
             </div>
         </div>
     </footer>
+    <script src="scripts/nav.js"></script>
     <script src="scripts/gallery.js"></script>
     <!-- <script src="https://gitcdn.link/repo/freeCodeCamp/testable-projects-fcc/master/build/bundle.js"></script> -->
 </body>
