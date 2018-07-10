@@ -8,6 +8,7 @@
     <meta name="author" content="Osamu Morozumi">
     <meta name="description" content="Portfolio page for web developer Osamu Morozumi">
     <link rel="stylesheet" href="portfolio.css">
+
 </head>
 
 <body>
@@ -32,19 +33,27 @@
             </header>
             <div class="nav-list">
                 <div class="link-container">
-                    <a class="nav-link" href="#projects">
-							Projects
+                    <a class="nav-link" href="#about">
+							About
 						</a>
                 </div>
                 <div class="link-container">
-                    <a class="nav-link" href="#about">
-							About
+                    <a class="nav-link" href="#projects">
+							Projects
 						</a>
                 </div>
                 <div class="link-container">
                     <a class="nav-link" href="#contact">
 							Contact
 						</a>
+                </div>
+            </div>
+            <div id="menu-toggle">
+                <div class="hamburger top">
+                </div>
+                <div class="hamburger top">
+                </div>
+                <div class="hamburger">
                 </div>
             </div>
         </div>
@@ -56,7 +65,7 @@
                 <h2 class="article-heading" id="about-heading">About</h2>
             </header>
             <div class="container" id="about-container">
-                <section class="about-section">
+                <section class="about-section about-picture">
                     <img class="profile-picture" src="images/profile-greyscale-reduced.jpg" alt="black and white profile picture">
 
                 </section>
@@ -233,7 +242,7 @@
             <div class="contact-section">
                 <form id="form" action="https://mail.google.com/mail">
                     <input id="name" type="text" placeholder="your name" required>
-                    <input id="number" type="number" placeholder="your phone number">
+                    <!-- <input id="number" type="number" placeholder="your phone number"> -->
                     <input type="email" name="email" id="email" placeholder="your email@mail.com" required>
                     <input id="submit" type="submit" value="Submit">
                 </form>
@@ -287,6 +296,7 @@
             </div>
         </div>
     </footer>
+    <script src="scripts/nav.js"></script>
     <script src="scripts/gallery.js"></script>
     <!-- <script src="https://gitcdn.link/repo/freeCodeCamp/testable-projects-fcc/master/build/bundle.js"></script> -->
 </body>

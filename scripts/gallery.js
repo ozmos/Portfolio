@@ -1,4 +1,4 @@
-var images = document.getElementsByClassName("project-tile");
+/* var images = document.getElementsByClassName("project-tile");
 var descriptions = document.getElementsByClassName("project-description-section");
 
 for (var i = 0; i < images.length; i++) {
@@ -15,4 +15,9 @@ for (var i = 0; i < images.length; i++) {
     });
 
 
+} */
+
+function slider() {
+    var descriptions = document.querySelectorAll(".project-description-section");
+    descriptions.forEach(tile => tile.classlist.toggle('slide'));
 }

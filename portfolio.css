@@ -29,18 +29,6 @@
     }
 }
 
-
-/* html {
-  
-}
-
-*,
-*:before,
-*:after {
-    box-sizing: inherit;
-}
- */
-
 * {
     max-width: 100%;
     box-sizing: border-box;
@@ -92,6 +80,10 @@ p,
 h3,
 a {
     font-family: var(--main-text, sans-serif);
+}
+
+p {
+    font-size: 18px;
 }
 
 .welcome-subheading {
@@ -182,15 +174,15 @@ a {
 
 .welcome-link {
     position: absolute;
-    right: 10%;
+    right: 8%;
     bottom: 10%;
-    transform: translate(100%, 100%);
+    transform: translate(-50%, -50%);
     font-size: 2em;
     font-family: 'Roboto Condensed', sans-serif;
     transform: rotate(-20deg);
     opacity: 0.2;
     color: var(--highlight, #00dffc);
-    animation: flick-on 1.5s linear 13s 1, flick-stay 3s linear 14.5s infinite;
+    animation: flick-on 1.5s linear 10s 1, flick-stay 3s linear 11.5s infinite;
 }
 
 .welcome-link:visited {
@@ -203,6 +195,7 @@ nav {
     text-align: center;
     width: 100%;
     color: var(--highlight, #00dffc);
+    z-index: 5;
 }
 
 .nav-container {
@@ -217,7 +210,7 @@ nav {
     border-bottom: 2px solid var(--highlight, #00dffc);
     font-weight: bold;
     opacity: 0.2;
-    animation: flick-on 1.5s linear 14s 1, fade-down 1s linear 15.5s 1, stays 3s linear 16.5s infinite;
+    animation: flick-on 1.5s linear 11s 1, fade-down 1s linear 12.5s 1, stays 3s linear 13.5s infinite;
 }
 
 #home-link {
@@ -243,6 +236,56 @@ nav {
     display: flex;
     justify-content: space-evenly;
     color: var(--highlight, #00dffc);
+}
+
+#menu-toggle {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .nav-list {
+        position: absolute;
+        top: 85px;
+        right: 0;
+        transform: translate(45%, 0);
+        display: none;
+        flex-direction: column;
+        align-items: flex-end;
+        line-height: 2;
+        font-size: 18px;
+    }
+    .toggle-reveal {
+        display: flex;
+    }
+    #menu-toggle {
+        position: relative;
+        display: inline-block;
+        --size: 30px;
+        --color: var(--highlight);
+        --thickness: calc(var(--size) / 8);
+        --margin: calc((var(--size) - calc(var(--thickness) * 3)) / 2);
+        width: var(--size);
+        height: var(--size);
+    }
+    .hamburger {
+        width: 100%;
+        border: 1px solid var(--color);
+        height: var(--thickness);
+        background: var(--color);
+        border-radius: calc(var(--thickness) / 2);
+    }
+    #menu-toggle:hover .hamburger {
+        box-shadow: var(--shadow-highlight);
+    }
+    .top {
+        margin-bottom: var(--margin);
+    }
+    .welcome-link {
+        bottom: 2%;
+    }
+    #socials-container {
+        margin-top: 3em;
+    }
 }
 
 .nav-link {
@@ -381,6 +424,11 @@ main {
     top: 0;
 }
 
+.slide {
+    height: 100%;
+    top: 0;
+}
+
 .project-description-text {
     color: var(--primary-light);
     /* font-size: 1.1rem; */
@@ -427,8 +475,8 @@ main {
 
 #about {
     position: relative;
-    height: calc(82.5vh + calc(var(--border-width) * 2));
-    background: var(--contrast);
+    /* height: calc(82.5vh + calc(var(--border-width) * 2)); */
+    background: linear-gradient(var(--contrast), #00aac0);
     padding: var(--header-height, 6rem), 0, var(--header-height, 6rem), 0;
     /* border-top: 10px solid var(--primary-dark, black); */
     border-bottom: var(--border-width, 40px) solid var(--primary-dark, black);
@@ -437,23 +485,27 @@ main {
 
 #about-container {
     position: relative;
-    top: calc(var(--header-height) + 50px);
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
+    margin: 40px auto;
     width: 900px;
     padding: 20px;
-    margin: auto;
     background: var(--secondary-highlight);
 }
 
 #about-header {
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
     width: 100vw;
     height: var(--header-height, 6rem);
     background: var(--border-highlight);
+}
+
+#about-header h2 {
+    margin: 0;
+    top: .6em;
 }
 
 .about-section {
@@ -462,8 +514,12 @@ main {
 
 .about-description {
     position: relative;
-    top: 10%;
     line-height: 1.5;
+    text-align: justify;
+}
+
+.profile-picture {
+    box-shadow: 2px 3px 8px 3px rgba(1, 1, 1, 0.8);
 }
 
 .tech {
@@ -472,7 +528,7 @@ main {
 
 #contact {
     position: relative;
-    background: var(--border-highlight, #222);
+    background: linear-gradient(to top, var(--border-highlight), #008c9e);
     padding: var(--container-padding, 20px);
     padding-bottom: 40px;
 }
@@ -520,6 +576,11 @@ input {
     letter-spacing: 0.1rem;
     font-size: 1rem;
     box-shadow: var(--shadow-article);
+    cursor: pointer;
+}
+
+#submit:hover {
+    opacity: 0.8;
 }
 
 .socials-icon {
