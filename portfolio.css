@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat|Roboto+Condensed|Roboto+Slab');
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
  :root {
     --primary-light: #fff;
     --highlight: #00dffc;
@@ -17,7 +18,7 @@
     --border-width: 40px;
     --main-text: 'Roboto Condensed';
     --headings: 'Roboto Slab';
-    --logo: 'Montserrat';
+    --logo: 'Pacifico';
     --shadow-article: 4px 4px rgba(1, 1, 1, 0.8);
     --shadow-box: 4px 4px 6px 3px rgba(1, 1, 1, 0.9);
     --shadow-highlight: -1px -1px 0 var(--contrast, #00dffc), 1px -1px 0 var(--contrast, #00dffc), -1px 1px 0 var(--contrast, #00dffc), 1px 1px 0 var(--contrast, #00dffc), 0 -2px 8px, 0 0 2px, 0 0 5px var(--contrast, #00dffc), 0 0 15px var(--contrast, #00dffc), 0 0 2px var(--contrast, #00dffc), 0 2px 3px var(--contrast, #00dffc);
@@ -36,6 +37,10 @@
 
 
 /* html, */
+
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     font-size: 100.001%;
