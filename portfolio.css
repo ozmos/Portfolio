@@ -14,7 +14,7 @@
     --container-padding: 20px;
     --smaller-container-padding: calc(var(--container-padding) / 2);
     --container-width: calc(100vw - var(--smaller-container-padding));
-    --tile-width: 300px;
+    --tile-width: 320px;
     --header-height: 8rem;
     --border-width: 40px;
     --main-text: 'Roboto Condensed';
@@ -424,6 +424,19 @@ main {
     width: var(--tile-width, 300px);
     margin: calc(var(--container-padding) / 2);
     box-shadow: var(--shadow-box, 4px 4px 6px 3px rgba(1, 1, 1, 0.9));
+    border: 10px solid var(--border-highlight);
+    border-bottom: 20px solid var(--border-highlight);
+}
+
+.image-label {
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 100%;
+    font-family: var(--main-text, sans-serif);
+    font-size: 0.9rem;
+    color: white;
 }
 
 .project-tile img {
@@ -450,7 +463,9 @@ main {
 
 .project-tile:hover {
     box-shadow: -1px -1px 0 var(--contrast, #00dffc), 1px -1px 0 var(--contrast, #00dffc), -1px 1px 0 var(--contrast, #00dffc), 1px 1px 0 var(--contrast, #00dffc), 0 -2px 8px, 0 0 2px, 0 0 5px var(--contrast, #00dffc), 0 0 15px var(--contrast, #00dffc), 0 0 2px var(--contrast, #00dffc), 0 2px 3px var(--contrast, #00dffc);
-    border: 2px solid var(--highlight);
+    /*  border: 2px solid var(--highlight); */
+    border: 10px solid var(--border-highlight);
+    border-bottom: 20px solid var(--border-highlight);
 }
 
 .project-tile:hover .project-description-section {

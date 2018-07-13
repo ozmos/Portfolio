@@ -1,23 +1,20 @@
-/* var images = document.getElementsByClassName("project-tile");
-var descriptions = document.getElementsByClassName("project-description-section");
+var tiles = document.querySelectorAll('.project-tile');
+var titleElements = document.getElementsByClassName('project-title');
+var titles = [];
+var labels = document.createElement('span');
 
-for (var i = 0; i < images.length; i++) {
-    images[i].id = i;
-    descriptions[i].id = i;
+for (let i = 0; i < tiles.length; i++) {
 
-    images[i].addEventListener("click", function() {
-        let index = Number(this.id);
-        descriptions[index].classList.toggle("reveal");
-    });
-    descriptions[i].addEventListener("click", function() {
-        let index = Number(this.id);
-        descriptions[index].classList.toggle("reveal");
-    });
-
-
-} */
-
-function slider() {
-    var descriptions = document.querySelectorAll(".project-description-section");
-    descriptions.forEach(tile => tile.classlist.toggle('slide'));
 }
+tiles.forEach(tile => tile.insertBefore(labels, tile.firstChild));
+labels.forEach(label => label.classList.add('image-label'));
+for (let i = 0; i < titleElements.length; i++) {
+    titles.push(titleElements[i].textContent);
+    /* tiles[i] */
+    /*  for (var j = 0; j < titles.length; j++) {
+         labels[j].textContent = titles[j];
+     } */
+}
+
+
+console.log(labels);
