@@ -38,7 +38,7 @@
 }
 
 
-/* html, */
+/* Root styles */
 
 html {
     scroll-behavior: smooth;
@@ -51,6 +51,24 @@ body {
     line-height: 1.2;
     letter-spacing: 0.1em;
 }
+
+main {
+    background: url(images/backgrounds/darkbricks.jpg), #222;
+    text-align: center;
+}
+
+p,
+h3,
+a {
+    font-family: var(--main-text, sans-serif);
+}
+
+p {
+    font-size: 18px;
+}
+
+
+/* Main header section or 'hero section' */
 
 #welcome-section {
     height: 100vh;
@@ -76,21 +94,9 @@ h2 {
 h1 {
     font-size: 5em;
     color: rgba(255, 255, 255, 0.2);
-    /* (116,238,21) */
     animation: fade-on 1.5s linear 4s 1, fades-down 1s linear 5.5s 1, stay 1s linear 6.5s infinite;
     text-shadow: none;
     margin: 0;
-    /* letter-spacing: 0em !important; */
-}
-
-p,
-h3,
-a {
-    font-family: var(--main-text, sans-serif);
-}
-
-p {
-    font-size: 18px;
 }
 
 .welcome-subheading {
@@ -102,11 +108,50 @@ p {
     font-family: var(--main-text, sans-serif);
 }
 
-@media (max-width: 768px) {
-    h1 {
-        font-size: 3.5em;
+
+/* letter i flickering effect */
+
+.luminous {
+    color: #fff;
+    animation: flicker 5s linear 2s 1, stay-on 2s linear 7s infinite;
+    opacity: .4;
+}
+
+
+/* letter i keyframes */
+
+@keyframes flicker {
+    0%,
+    0.999%,
+    2%,
+    2.999%,
+    4%,
+    5.999%,
+    50%,
+    100% {
+        opacity: .99;
+        text-shadow: -1px -1px 0 rgb(255, 255, 255), 1px -1px 0 rgb(255, 255, 255), -1px 1px 0 rgb(255, 255, 255), 1px 1px 0 rgb(255, 255, 255), 0 -2px 8px, 0 0 2px, 0 0 5px rgb(255, 255, 255), 0 0 15px rgb(255, 255, 255), 0 0 2px #ff7e00, 0 2px 3px #000;
+    }
+    1%,
+    1.999%,
+    3%,
+    3.999%,
+    6% {
+        opacity: .4;
+        text-shadow: none;
     }
 }
+
+@keyframes stay-on {
+    0%,
+    100% {
+        opacity: .99;
+        text-shadow: -1px -1px 0 rgb(255, 255, 255), 1px -1px 0 rgb(255, 255, 255), -1px 1px 0 rgb(255, 255, 255), 1px 1px 0 rgb(255, 255, 255), 0 -2px 8px, 0 0 2px, 0 0 5px rgb(255, 255, 255), 0 0 15px rgb(255, 255, 255), 0 0 2px #ff7e00, 0 2px 3px #000;
+    }
+}
+
+
+/* Heading and subheading keyframes */
 
 @keyframes fade-on {
     0%,
@@ -143,42 +188,6 @@ p {
     }
 }
 
-.luminous {
-    color: #fff;
-    animation: flicker 5s linear 2s 1, stay-on 2s linear 7s infinite;
-    opacity: .4;
-}
-
-@keyframes flicker {
-    0%,
-    0.999%,
-    2%,
-    2.999%,
-    4%,
-    5.999%,
-    50%,
-    100% {
-        opacity: .99;
-        text-shadow: -1px -1px 0 rgb(255, 255, 255), 1px -1px 0 rgb(255, 255, 255), -1px 1px 0 rgb(255, 255, 255), 1px 1px 0 rgb(255, 255, 255), 0 -2px 8px, 0 0 2px, 0 0 5px rgb(255, 255, 255), 0 0 15px rgb(255, 255, 255), 0 0 2px #ff7e00, 0 2px 3px #000;
-    }
-    1%,
-    1.999%,
-    3%,
-    3.999%,
-    6% {
-        opacity: .4;
-        text-shadow: none;
-    }
-}
-
-@keyframes stay-on {
-    0%,
-    100% {
-        opacity: .99;
-        text-shadow: -1px -1px 0 rgb(255, 255, 255), 1px -1px 0 rgb(255, 255, 255), -1px 1px 0 rgb(255, 255, 255), 1px 1px 0 rgb(255, 255, 255), 0 -2px 8px, 0 0 2px, 0 0 5px rgb(255, 255, 255), 0 0 15px rgb(255, 255, 255), 0 0 2px #ff7e00, 0 2px 3px #000;
-    }
-}
-
 .welcome-link {
     position: absolute;
     right: 8%;
@@ -205,6 +214,9 @@ nav {
     z-index: 5;
 }
 
+
+/* nav container turns blue on scroll down */
+
 .blue {
     background: var(--nav-background, rgba(0, 95, 107, 0.7));
 }
@@ -217,7 +229,6 @@ nav {
     align-items: center;
     width: 90%;
     color: var(--highlight, #00dffc);
-    /* background: var(--highlight, var(--highlight, #00dffc)); */
     border-bottom: 2px solid var(--highlight, #00dffc);
     font-weight: bold;
     opacity: 0.2;
@@ -264,7 +275,13 @@ nav {
     top: -40px;
 }
 
+
+/* media breaks*/
+
 @media (max-width: 768px) {
+    h1 {
+        font-size: 3.5em;
+    }
     .nav-container {
         width: 100%;
         padding: 0 10px;
@@ -322,6 +339,9 @@ nav {
         margin-top: 3em;
     }
 }
+
+
+/* navbar and neon sign keyframes */
 
 @keyframes flick-on {
     0%,
@@ -390,11 +410,67 @@ nav {
     }
 }
 
-main {
-    background: url(images/backgrounds/darkbricks.jpg), #222;
-    /* background: var(--secondary-light, rgb(255, 255, 255)smoke); */
-    text-align: center;
+
+/* end header section styles */
+
+
+/* start main content styles*/
+
+#about {
+    position: relative;
+    /* height: calc(82.5vh + calc(var(--border-width) * 2)); */
+    background: linear-gradient(var(--contrast), #00aac0);
+    padding: var(--header-height, 6rem), 0, var(--header-height, 6rem), 0;
+    /* border-top: 10px solid var(--primary-dark, black); */
+    border-bottom: var(--border-width, 40px) solid var(--primary-dark, black);
+    box-shadow: 0 5px 10px 5px rgba(1, 1, 1, 0.9), 0 -5px 10px 5px rgba(1, 1, 1, 0.9);
 }
+
+#about-container {
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    margin: 40px auto;
+    width: 900px;
+    padding: 20px;
+    background: var(--secondary-highlight);
+}
+
+#about-header {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: var(--header-height, 6rem);
+    background: var(--border-highlight);
+}
+
+#about-header h2 {
+    margin: 0;
+    top: .6em;
+}
+
+.about-section {
+    width: 350px;
+}
+
+.about-description {
+    position: relative;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+.profile-picture {
+    box-shadow: 2px 3px 8px 3px rgba(1, 1, 1, 0.8);
+}
+
+.tech {
+    font-weight: bold;
+}
+
+
+/* gallery section */
 
 #projects {
     padding: var(--container-padding, 20px);
@@ -522,58 +598,8 @@ main {
     color: var(--highlight-hover, hsl(187, 80%, 49%));
 }
 
-#about {
-    position: relative;
-    /* height: calc(82.5vh + calc(var(--border-width) * 2)); */
-    background: linear-gradient(var(--contrast), #00aac0);
-    padding: var(--header-height, 6rem), 0, var(--header-height, 6rem), 0;
-    /* border-top: 10px solid var(--primary-dark, black); */
-    border-bottom: var(--border-width, 40px) solid var(--primary-dark, black);
-    box-shadow: 0 5px 10px 5px rgba(1, 1, 1, 0.9), 0 -5px 10px 5px rgba(1, 1, 1, 0.9);
-}
 
-#about-container {
-    position: relative;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    margin: 40px auto;
-    width: 900px;
-    padding: 20px;
-    background: var(--secondary-highlight);
-}
-
-#about-header {
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: var(--header-height, 6rem);
-    background: var(--border-highlight);
-}
-
-#about-header h2 {
-    margin: 0;
-    top: .6em;
-}
-
-.about-section {
-    width: 350px;
-}
-
-.about-description {
-    position: relative;
-    line-height: 1.5;
-    text-align: justify;
-}
-
-.profile-picture {
-    box-shadow: 2px 3px 8px 3px rgba(1, 1, 1, 0.8);
-}
-
-.tech {
-    font-weight: bold;
-}
+/*contact section*/
 
 #contact {
     position: relative;
@@ -650,6 +676,9 @@ textarea {
 #socials-container a {
     text-decoration: none;
 }
+
+
+/* footer section styles */
 
 footer {
     position: relative;
