@@ -244,9 +244,9 @@
             <h2 class="article-heading" id="contact-heading">Get in touch</h2>
             <div class="contact-section">
                 <form id="form" action="https://mail.google.com/mail">
-                    <input id="name" type="text" placeholder="your name" required>
-                    <!-- <input id="number" type="number" placeholder="your phone number"> -->
-                    <input type="email" name="email" id="email" placeholder="your email@mail.com" required>
+                    <input id="name" type="text" placeholder="your name" maxlength="40" required>
+                    <input type="email" name="email" id="email" placeholder="your email@mail.com" maxlength="40" required>
+                    <textarea id="comments" placeholder="Your comments..." maxlength="140"></textarea>
                     <input id="submit" type="submit" value="Submit">
                 </form>
 
