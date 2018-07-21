@@ -601,7 +601,7 @@ nav {
 
 /*contact section*/
 
-#contact {
+#contact-form {
     position: relative;
     background: linear-gradient(to top, var(--border-highlight), #008c9e);
     padding: var(--container-padding, 20px);

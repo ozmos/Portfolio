@@ -1,0 +1,104 @@
+{
+	"default_lang": "en-gb",
+	"email": {
+		"subject": {
+			"en-gb": "Website enquiry",
+			"en-us": "Website enquiry"
+		},
+		"error": {
+			"en-gb": "Unfortunately, your details failed to send: {$1}",
+			"en-us": "Unfortunately, your details failed to send: {$1}"
+		},
+		"confirmation": {
+			"subject": {
+				"en-gb": "Thanks for your details",
+				"en-us": "Thanks for your details"
+			},
+			"body": {
+				"en-gb": "Thanks! Your details have been received and we'll get back to you soon!",
+				"en-us": "Thanks! Your details have been received and we'll get back to you soon"
+			}
+		}
+	},
+	"form": {
+		"success": {
+			"title": {
+				"en-gb": "Thank you! Your details were successfully sent! We'll get back to you soon.",
+				"en-us": "Thank you! Your details were successfully sent! We'll get back to you soon."
+			},
+			"button_text": {
+				"en-gb": "Thanks!",
+				"en-us": "Thanks!"
+			}
+		},
+		"error": {
+			"title": {
+				"en-gb": "Unfortunately, something went wrong.",
+				"en-us": "Unfortunately, something went wrong."
+			},
+			"required": {
+				"en-gb": "We need your {$1}.",
+				"en-us": "We need your {$1}."
+			},
+			"email": {
+				"en-gb": "Your email address is invalid.",
+				"en-us": "Your email address is invalid."
+			},
+			"numeric": {
+				"en-gb": "Your {$1} should only contain numbers",
+				"en-us": "Your {$1} should only contain numbers"
+			},
+			"honeypot": {
+				"en-gb": "Please leave the last field empty, we're using it to stop robots using the form.",
+				"en-us": "Please leave the last field empty, we're using it to stop robots using the form."
+			},
+			"file": {
+				"size": {
+					"en-gb": "Your file(s) exceed the {$1}mb limit, please consider using a cloud based service like <a href=\"https://www.wetransfer.com/\">wetransfer</a>.",
+					"en-us": "Your file(s) exceed the {$1}mb limit, please consider using a cloud based service like <a href=\"https://www.wetransfer.com/\">wetransfer</a>."
+				},
+				"type": {
+					"en-gb": "We don't allow the file type for {$1}.",
+					"en-us": "We don't allow the file type for {$1}."
+				},
+				"failed": {
+					"en-gb": "The file upload failed for {$1}.",
+					"en-us": "The file upload failed for {$1}."
+				},
+				"server_limit": {
+					"en-gb": "You've tried uploading a file bigger than your hosting provider has allowed in the php.ini file - please contact your hosting provider to confirm.",
+					"en-us": "You've tried uploading a file bigger than your hosting provider has allowed in the php.ini file - please contact your hosting provider to confirm."
+				},
+				"general": {
+					"en-gb": "There was an error with the file {$1}: {$2}",
+					"en-us": "There was an error with the file {$1}: {$2}"
+				},
+				"captcha": {
+					"empty": {
+						"en-gb": "Please complete the CAPTCHA",
+						"en-us": "Please complete the CAPTCHA"
+					},
+					"bot": {
+						"en-gb": "Google reCAPTCHA had a problem: {$1}",
+						"en-us": "Google reCAPTCHA had a problem: {$1}"
+					},
+					"empty_response": {
+						"en-gb": "The <a target=\"new\" href=\"{$1}\">reCaptcha response from Google</a> can't be accessed by process.php<br>Your hosting provider may be blocking cURL and/or file_get_contents() – please verify this with them.<br>Please <a target=\"new\" href=\"https://codecanyon.net/item/ultimate-php-html5-ajax-contact-form-bootstrap-edition/18332006/support\">contact us</a> after you have spoken to your hosting provider",
+						"en-us": "The <a target=\"new\" href=\"{$1}\">reCaptcha response from Google</a> can't be accessed by process.php<br>Your hosting provider may be blocking cURL and/or file_get_contents() – please verify this with them.<br>Please <a target=\"new\" href=\"https://codecanyon.net/item/ultimate-php-html5-ajax-contact-form-bootstrap-edition/18332006/support\">contact us</a> after you have spoken to your hosting provider"
+					}
+				},
+				"back_link": {
+					"en-gb": "Please go <a href=\"javascript:history.back()\">back a page</a> to correct it.",
+					"en-us": "Please go <a href=\"javascript:history.back()\">back a page</a> to fix it."
+				}
+			},
+			"button_text": {
+				"en-gb": "Sending...",
+				"en-us": "Sending..."
+			},
+			"reset": {
+				"en-gb": "Reset",
+				"en-us": "Reset"
+			}
+		}
+	}

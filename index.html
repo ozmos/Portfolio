@@ -2,13 +2,21 @@
 <html lang="en-UK">
 
 <head>
-    <title>Portfolio - Osamu Morozumi, Web developer</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portfolio - Osamu Morozumi, Web developer</title>
+
     <meta name="author" content="Osamu Morozumi">
     <meta name="description" content="Portfolio page for web developer Osamu Morozumi.  Osamu is a freelance web developer and designer living in Perth Australia.  He builds web projects in HTML5, CSS3 and javaScript">
-    <meta name="keywords" content="web, web development, designer, web designer, HTML5, html, CSS3, css, javaScript, jQuery, front-end, front end, full stack">
+    <meta name="keywords" content="web, web development, designer, web designer, HTML5, html, CSS3, css, javaScript, jQuery, front-end, front end, full stack, css grid, flex-box">
     <link rel="stylesheet" href="portfolio.css">
+    <link rel="stylesheet" href="contact-form/assets/css/styles.css">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="/contact-form/assets/js/contact.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 </head>
 
@@ -28,7 +36,7 @@
         <div id="navcon" class="nav-container">
             <header class="nav-header">
                 <a id="home-link" href="#home">
-                    <h2>OsM Design</h2>
+                    <h2>Ozmos Design</h2>
                 </a>
             </header>
             <div class="nav-list">
@@ -239,16 +247,28 @@
             </section>
         </article>
 
-        <article id="contact">
+        <article id="contact-form">
             <a class="nav-anchor" id="contact-link"></a>
             <h2 class="article-heading" id="contact-heading">Get in touch</h2>
             <div class="contact-section">
-                <form id="form" action="https://mail.google.com/mail">
-                    <input id="name" type="text" placeholder="your name" maxlength="40" required>
-                    <input type="email" name="email" id="email" placeholder="your email@mail.com" maxlength="40" required>
-                    <textarea id="comments" placeholder="Your comments..." maxlength="140"></textarea>
-                    <input id="submit" type="submit" value="Submit">
-                </form>
+                <div class="message">
+                    <form action="/contact-form/process.php" enctype="multipart/form-data" method="POST" name="contact" id="contact" class="ucf" novalidate>
+                        <input class="form-control" type="text" name="name" id="name" maxlength="40" placeholder="your name" required>
+                        <input class="form-control" type="email" name="email" id="email" maxlength="40" placeholder="your email@mail.com" required>
+                        <textarea class="form-control" name="message" id="message" maxlength="140" placeholder="Your comments..." required></textarea>
+                        <div class="form-group" style="left: -9999px; position: absolute;">
+                            <label for="honey" class="col-sm-2 control-label">
+                            Please leave this field empty - we're using it to stop robots submitting the form<br>
+                        </label>
+                            <div class="col-sm-10">
+                                <input class="form-control" type="text" name="honey" id="honey">
+                            </div>
+                        </div>
+                        <div class="progress-container"></div>
+
+                        <input id="submit" type="submit" value="Submit">
+                    </form>
+                </div>
 
                 <div class="container" id="socials-container">
                     <h3 id="socials-heading">Catch me hanging out here</h3>
