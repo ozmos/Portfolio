@@ -11,14 +11,16 @@
     <meta name="description" content="Portfolio page for web developer Osamu Morozumi.  Osamu is a freelance web developer and designer living in Perth Australia.  He builds web projects in HTML5, CSS3 and javaScript">
     <meta name="keywords" content="web, web development, designer, web designer, HTML5, html, CSS3, css, javaScript, jQuery, front-end, front end, full stack, css grid, flex-box">
     <link rel="stylesheet" href="portfolio.css">
-    <link rel="stylesheet" href="contact-form/assets/css/styles.css">
+
+
+</head>
+<!-- 
+<link rel="stylesheet" href="contact-form/assets/css/styles.css">
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="/contact-form/assets/js/contact.js"></script>
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-
-</head>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
 
 <body>
     <a id="home"></a>
@@ -252,10 +254,11 @@
             <h2 class="article-heading" id="contact-heading">Get in touch</h2>
             <div class="contact-section">
                 <div class="message">
-                    <form action="/contact-form/process.php" enctype="multipart/form-data" method="POST" name="contact" id="contact" class="ucf" novalidate>
+                    <!-- action="/contact-form/process.php" enctype="multipart/form-data" method="POST" -->
+                    <form name="contact" id="contact" class="ucf" novalidate>
                         <input class="form-control" type="text" name="name" id="name" maxlength="40" placeholder="your name" required>
                         <input class="form-control" type="email" name="email" id="email" maxlength="40" placeholder="your email@mail.com" required>
-                        <textarea class="form-control" name="message" id="message" maxlength="140" placeholder="Your comments..." required></textarea>
+                        <textarea class="form-control" name="message" id="message" maxlength="140" placeholder="Please visit www.ozmosdesign.com to contact me directly" required></textarea>
                         <div class="form-group" style="left: -9999px; position: absolute;">
                             <label for="honey" class="col-sm-2 control-label">
                             Please leave this field empty - we're using it to stop robots submitting the form<br>
@@ -266,7 +269,7 @@
                         </div>
                         <div class="progress-container"></div>
 
-                        <input id="submit" type="submit" value="Submit">
+                        <a href="http://www.ozmosdesign.com/#contact" target="_blank"><input id="submit" value="Submit"></a>
                     </form>
                 </div>
 

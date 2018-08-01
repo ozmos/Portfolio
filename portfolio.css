@@ -645,6 +645,8 @@ textarea {
 #submit {
     background: var(--contrast);
     /* #001116; */
+    display: inline-block;
+    width: 100%;
     margin-top: 10px;
     border: none;
     color: var(--primary-light);
@@ -653,6 +655,7 @@ textarea {
     font-size: 1rem;
     box-shadow: var(--shadow-article);
     cursor: pointer;
+    text-align: center;
 }
 
 #submit:hover {
