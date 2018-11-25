@@ -14,16 +14,12 @@
 
 
 </head>
-<!-- 
-<link rel="stylesheet" href="contact-form/assets/css/styles.css">
-
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="/contact-form/assets/js/contact.js"></script>
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
 
 <body>
     <a id="home"></a>
+
+    <!-- Header section, full screen  -->
+
     <header id="welcome-section">
         <div class="headings-section">
             <h1>
@@ -34,6 +30,9 @@
             <h3>See my work</h3>
         </a>
     </header>
+
+    <!-- Navbar -->
+
     <nav id="navbar">
         <div id="navcon" class="nav-container">
             <header class="nav-header">
@@ -71,6 +70,8 @@
     </nav>
     <main>
 
+        <!-- About section -->
+
         <article id="about">
             <a class="nav-anchor" id="about-link"></a>
             <header class="article-header" id="about-header">
@@ -83,24 +84,56 @@
                 </section>
                 <section class="about-section">
 
-                    <!-- <h3 class="about-section-heading">About me</h3> -->
                     <p class="about-description">
                         I started coding in March 2018 in response to extended time off work due to injury. Web development has quickly become my passion and I love building web apps and designing web pages. I have experience using: <em class="tech">HTML5</em>,
                         <em class="tech">CSS3</em>, <em class="tech">javaScript</em>, <em class="tech">jQuery</em> and <em class="tech">git</em>. I am always improving my development skills and knowledge.
                     </p>
-                    <!-- <span class="image-label">Click for more info</span> -->
         </article>
+
+        <!-- Projects -->
+
         <article id="projects">
             <a class="nav-anchor" id="project-link"></a>
             <h2 class="article-heading" id="projects-heading">Projects</h2>
             <div class="container" id="projects-container">
+                <!-- calculator -->
+                <section class="project-section project-tile">
+                    <img src="images/portfolio-thumbs/calculator.png" alt="project thumb">
+                    <section class="project-section project-description-section">
+                        <div class="project-description-text">
+                            <h3 class="project-title">React calculator</h3>
+                            <p>
+                                Working calculator built with react js.
+                            </p>
+                            <a href='https://codepen.io/ozmos/full/OaJdPB/' target="_blank">Project</a>
+                            <br>
+                            <a href="https://codepen.io/ozmos/pen/OaJdPB" target="_blank">Code</a>
+                        </div>
+                    </section>
+                </section>
+                <!-- drum machine -->
+                <section class="project-section project-tile">
+                    <img src="images/portfolio-thumbs/drum-machine.png" alt="project thumb">
+                    <section class="project-section project-description-section">
+                        <div class="project-description-text">
+                            <h3 class="project-title">React-redux drum-machine</h3>
+                            <p>
+                                Interactive drum-machine featuring four separate sample banks with changing color scheme.
+                            </p>
+                            <a href='https://ozmos.github.io/drum-machine/' target="_blank">Project</a>
+                            <br>
+                            <a href="https://github.com/ozmos/drum-machine" target="_blank">Code</a>
+                        </div>
+                    </section>
+                </section>
+                <!-- markdown-previewer -->
                 <section class="project-section project-tile">
                     <img src="images/portfolio-thumbs/React-markdown-previewer.png" alt="project thumb">
                     <section class="project-section project-description-section">
                         <div class="project-description-text">
                             <h3 class="project-title">React markdown previewer</h3>
                             <p>
-                            This markdown previewer uses marked.js and the React library to render markdown into html as the user types into the input. 
+                                This markdown previewer uses marked.js and the React library to render markdown into html as the user types into the input.
                             </p>
                             <a href='https://ozmos.github.io/React-markdown-previewer/' target="_blank">Project</a>
                             <br>
@@ -108,12 +141,10 @@
                         </div>
                     </section>
                 </section>
-
+                <!-- product landing page -->
                 <section class="project-section project-tile">
-
                     <img src="images/portfolio-thumbs/product-landing-page-resized.jpg" alt="project thumb">
                     <section class="project-section project-description-section">
-
                         <div class="project-description-text">
                             <h3 class="project-title">Product landing page</h3>
                             <p>
@@ -124,9 +155,8 @@
                             <a href="https://github.com/ozmos/product-landing-page" target="_blank">Code</a>
                         </div>
                     </section>
-
                 </section>
-
+                <!-- survey form -->
                 <section class="project-section project-tile">
                     <img src="images/portfolio-thumbs/survey-form-resized.jpg" alt="project thumb">
                     <section class="project-section project-description-section">
@@ -141,11 +171,10 @@
                         </div>
                     </section>
                 </section>
-
+                <!-- technical documentation page -->
                 <section class="project-section project-tile">
                     <img src="images/portfolio-thumbs/tech-doc-page-resized.jpg" alt="project thumb">
                     <section class="project-section project-description-section">
-
                         <div class="project-description-text">
                             <h3 class="project-title">Technical documentation page</h3>
                             <p>
@@ -157,11 +186,10 @@
                         </div>
                     </section>
                 </section>
-
+                <!-- wikipedia viewer -->
                 <section class="project-section project-tile">
                     <img src="images/portfolio-thumbs/wikiviewer-resized.jpg" alt="project thumb">
                     <section class="project-section project-description-section">
-
                         <div class="project-description-text">
                             <h3 class="project-title">Wikiviewer</h3>
                             <p>
@@ -173,11 +201,10 @@
                         </div>
                     </section>
                 </section>
-
+                <!-- random quote generator -->
                 <section class="project-section project-tile">
                     <img src="images/portfolio-thumbs/random-quote-hard-resized.jpg" alt="project thumb">
                     <section class="project-section project-description-section">
-
                         <div class="project-description-text">
                             <h3 class="project-title">Random quote generator</h3>
                             <p>
@@ -189,7 +216,7 @@
                         </div>
                     </section>
                 </section>
-
+                <!-- clock -->
                 <section class="project-section project-tile">
                     <img src="images/portfolio-thumbs/clock-app-resized.jpg" alt="project thumb">
                     <section class="project-section project-description-section">
@@ -205,38 +232,7 @@
                         </div>
                     </section>
                 </section>
-
-                <section class="project-section project-tile">
-                    <img src="images/portfolio-thumbs/image-viewer-resized.jpg" alt="project thumb">
-                    <section class="project-section project-description-section">
-
-                        <div class="project-description-text">
-                            <h3 class="project-title">Image viewer</h3>
-                            <p>
-                                This is a simple image viewing gallery I made with Javascript.
-                            </p>
-                            <a href="https://ozmos.github.io/image-viewer/" target="_blank">Project</a>
-                            <br>
-                            <a href="https://github.com/ozmos/image-viewer" target="_blank">Code</a>
-                        </div>
-                    </section>
-                </section>
-
-                <section class="project-section project-tile">
-                    <img src="images/portfolio-thumbs/tribute-page-resized.jpg" alt="project thumb">
-                    <section class="project-section project-description-section">
-                        <div class="project-description-text">
-                            <h3 class="project-title">Tribute page</h3>
-                            <p>
-                                This page utilizes flex-box, grid and media queries to create responsive elements within a flexible layout. Created as a project for free code camp.
-                            </p>
-                            <a href="https://ozmos.github.io/Sam-Harris-tribute-page/" target="_blank">Project</a>
-                            <br>
-                            <a href="https://github.com/ozmos/Sam-Harris-tribute-page" target="_blank">Code</a>
-                        </div>
-                    </section>
-                </section>
-
+                <!-- weather viewer -->
                 <section class="project-section project-tile">
                     <img src="images/portfolio-thumbs/weather-app-resized.jpg" alt="project thumb">
                     <section class="project-section project-description-section">
@@ -253,6 +249,7 @@
                 </section>
 
             </div>
+
             <section id="profile-links">
 
 
@@ -263,13 +260,12 @@
 
             </section>
         </article>
-
+        <!-- contact section -->
         <article id="contact-form">
             <a class="nav-anchor" id="contact-link"></a>
             <h2 class="article-heading" id="contact-heading">Get in touch</h2>
             <div class="contact-section">
                 <div class="message">
-                    <!-- action="/contact-form/process.php" enctype="multipart/form-data" method="POST" -->
                     <form name="contact" id="contact" class="ucf" novalidate>
                         <input class="form-control" type="text" name="name" id="name" maxlength="40" placeholder="your name" required>
                         <input class="form-control" type="email" name="email" id="email" maxlength="40" placeholder="your email@mail.com" required>
@@ -287,7 +283,7 @@
                         <a href="http://www.ozmosdesign.com/#contact" target="_blank"><input id="submit" value="Submit"></a>
                     </form>
                 </div>
-
+                <!-- social media -->
                 <div class="container" id="socials-container">
                     <h3 id="socials-heading">Catch me hanging out here</h3>
                     <a href="https://twitter.com/ozmosTheGreat" target="_blank">
@@ -308,6 +304,7 @@
             </div>
         </article>
     </main>
+    <!-- footer section -->
     <footer>
         <span class="copyright-info">
 				<a href="https://github.com/ozmos" target="blank">
